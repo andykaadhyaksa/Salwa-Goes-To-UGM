@@ -21,7 +21,7 @@ Aplikasi belajar persiapan tes PAPs UGM (satu berkas HTML, tanpa build). Bisa di
 
 ## Catatan
 - Data belajar tersimpan di browser perangkat (localStorage). Pakai Pengaturan → Cadangan untuk pindah perangkat.
-- Setelah memperbarui `index.html`, naikkan angka versi di `sw.js` (`const V='paps-v13'`) agar HP memuat versi baru.
+- Setelah memperbarui `index.html`, naikkan angka versi di `sw.js` (`const V='paps-v14'`) agar HP memuat versi baru.
 - Pembuatan laporan PDF memuat pustaka dari cdnjs; butuh internet saat pertama kali.
 
 © 2026 Salwa Tsania Nisa, S.K.M.

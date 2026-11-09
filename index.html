@@ -1575,8 +1575,8 @@ async function syBackend(){
     return null;}}catch(e){}
   const c=Sync.cfg?Object.assign({},DEFCFG,Sync.cfg):null;
   if(c&&c.url&&c.key&&c.code){const base=c.url.replace(/\/+$/,'')+'/rest/v1/paps_sync',H=Object.assign({apikey:c.key,'Content-Type':'application/json'},/^sb_/.test(c.key)?{}:{Authorization:'Bearer '+c.key});
-    Sync.be={name:'Supabase',get:async()=>{const r=await fetch(base+'?id=eq.'+encodeURIComponent(c.code)+'&select=upd,json',{headers:H});if(!r.ok)throw new Error('HTTP '+r.status);const a=await r.json();return a[0]?{upd:+a[0].upd,json:a[0].json}:null;},
-      set:async(upd,json)=>{const r=await fetch(base,{method:'POST',headers:Object.assign({Prefer:'resolution=merge-duplicates,return=minimal'},H),body:JSON.stringify({id:c.code,upd,json})});if(!r.ok)throw new Error('HTTP '+r.status);}};
+    Sync.be={name:'Supabase',get:async()=>{const r=await fetch(base+'?id=eq.'+encodeURIComponent(c.code)+'&select=upd,json',{headers:H});if(!r.ok)throw new Error('HTTP '+r.status+' '+(await r.text()).slice(0,140));const a=await r.json();return a[0]?{upd:+a[0].upd,json:a[0].json}:null;},
+      set:async(upd,json)=>{const r=await fetch(base,{method:'POST',headers:Object.assign({Prefer:'resolution=merge-duplicates,return=minimal'},H),body:JSON.stringify({id:c.code,upd,json})});if(!r.ok)throw new Error('HTTP '+r.status+' '+(await r.text()).slice(0,140));}};
     return Sync.be;}
   return null;}
 function syApply(o){S=Object.assign(DEF(),o);S.set=Object.assign(DEF().set,o.set||{});_saveRaw();Sync.base=S.upd||0;try{localStorage.setItem(SYM,String(Sync.base));}catch(e){}}
@@ -1595,7 +1595,7 @@ async function syncNow(manual){
     Sync.base=S.upd||0;try{localStorage.setItem(SYM,String(Sync.base));}catch(e){}
     Sync.t=Date.now();syStatus('Tersinkron · '+new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'})+' · '+be.name);
     if(pulled){toast('Data dari perangkat lain dimuat.');render();}
-  }catch(e){syStatus(e&&e.code==='resource_exhausted'?'Data terlalu besar untuk disimpan online':'Gagal sinkron (offline?). Akan dicoba lagi.');}
+  }catch(e){syStatus(e&&e.code==='resource_exhausted'?'Data terlalu besar untuk disimpan online':'Gagal sinkron: '+(e&&e.message?e.message:'tidak diketahui')+(/Failed to fetch|NetworkError|Load failed/i.test(e&&e.message||'')?' (jaringan, pemblokir iklan, atau alamat Supabase salah)':'')+'. Akan dicoba lagi.');window.__syErr=e;}
   Sync.busy=false;}
 Sync.sched=function(){clearTimeout(Sync.timer);Sync.timer=setTimeout(()=>{syncNow();},2000);};
 function syncCard(){
