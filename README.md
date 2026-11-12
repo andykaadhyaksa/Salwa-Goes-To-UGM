@@ -20,8 +20,9 @@ Aplikasi belajar persiapan tes PAPs UGM (satu berkas HTML, tanpa build). Bisa di
 4. Di perangkat lain buka alamat yang sama, ketik kode yang sama. Salwa dan Andyka bisa memakai kode berbeda bila ingin riwayat terpisah.
 
 ## Catatan
+- Pembaruan v15: rumus (pecahan, akar, pangkat) ditulis bertumpuk rapi; setiap pembahasan berisi Langkah pengerjaan, Rumus & konsep, dan Tips & trik; kunci jawaban yang keliru dibetulkan; soal yang ambigu/rusak/duplikat disembunyikan otomatis (tidak muncul di latihan, tetap aman di riwayat). Kunci progres tidak berubah (`asal_paps_v1`).
 - Data belajar tersimpan di browser perangkat (localStorage). Pakai Pengaturan → Cadangan untuk pindah perangkat.
-- Setelah memperbarui `index.html`, naikkan angka versi di `sw.js` (`const V='paps-v14'`) agar HP memuat versi baru.
+- Setelah memperbarui `index.html`, naikkan angka versi di `sw.js` (`const V='paps-v15'`) agar HP memuat versi baru.
 - Pembuatan laporan PDF memuat pustaka dari cdnjs; butuh internet saat pertama kali.
 
 © 2026 Salwa Tsania Nisa, S.K.M.
