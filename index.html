@@ -384,7 +384,7 @@ h1{font-size:26px}
 
 /* ===== Rumus rapi & pembahasan terstruktur ===== */
 .fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.15;margin:0 3px;font-size:.92em}.fr .n{padding:0 3px 2px;border-bottom:1.5px solid currentColor}.fr .d{padding:2px 3px 0}
-.rt{white-space:nowrap}.rt .rv{border-top:1.5px solid currentColor;padding:1px 2px 0;margin-left:1px}
+.sqr{white-space:nowrap}.sqr .sqv{border-top:1.5px solid currentColor;padding:1px 2px 0;margin-left:1px}
 .explain.x{white-space:normal;overflow-wrap:anywhere}
 .exs{margin-top:10px}
 .exh{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);margin-bottom:4px}
@@ -770,14 +770,14 @@ const FRRE=new RegExp('(?<![\\w/>.,])('+FTOK+')\\s?/\\s?('+FTOK+')(?![\\w/<]|[.,
 const strp=s=>/^\(.*\)$/.test(s)?s.slice(1,-1):s;
 function fmText(s){
   s=s.replace(FRRE,(m,a,b)=>'<span class="fr"><span class="n">'+strp(a)+'</span><span class="d">'+strp(b)+'</span></span>');
-  s=s.replace(/√\(([^()<>]+)\)/g,'<span class="rt">√<span class="rv">$1</span></span>').replace(/√(\d+(?:[.,]\d+)?|[a-zA-Z]\w?)/g,'<span class="rt">√<span class="rv">$1</span></span>');
+  s=s.replace(/√\(([^()<>]+)\)/g,'<span class="sqr">√<span class="sqv">$1</span></span>').replace(/√(\d+(?:[.,]\d+)?|[a-zA-Z]\w?)/g,'<span class="sqr">√<span class="sqv">$1</span></span>');
   s=s.replace(/\^\(([^()<>]+)\)/g,'<sup>$1</sup>').replace(/\^([−-]?\w+)/g,'<sup>$1</sup>');
   return s;}
 function fmH(h){return String(h).split(/(<[^>]*>)/).map((p,i)=>i%2?p:fmText(p)).join('');}
 function fmx(t){return fmH(esc(t));}
 const qHtml=q=>fmH((q.src&&q.src.startsWith('Generator'))?q.q:esc(q.q)).replace(/\n/g,'<br>');
 const eHtml=s=>esc(s).replace(/\n/g,'<br>');
-const oHtml=v=>isSvg(v)?v:'<span>'+fmx(v)+'</span>';
+const oHtml=v=>isSvg(v)?v:'<span>'+fmx(String(v).replace(/^-(?=\d)/,'−'))+'</span>';
 function exBlock(q){
   const x=q.x;
   if(!x)return q.e?eHtml(q.e):'<span class="muted">Pembahasan tidak tersedia.</span>';
