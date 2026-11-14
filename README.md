@@ -20,9 +20,10 @@ Aplikasi belajar persiapan tes PAPs UGM (satu berkas HTML, tanpa build). Bisa di
 4. Di perangkat lain buka alamat yang sama, ketik kode yang sama. Salwa dan Andyka bisa memakai kode berbeda bila ingin riwayat terpisah.
 
 ## Catatan
+- Pembaruan v19 (14 Nov 2026): **pembahasan visual**. Setiap pembahasan kini berisi kotak jawaban hijau, diagram sesuai jenis soal (busur pola deret angka dan huruf, rantai hitung, diagram Venn himpunan, alur diskon bertingkat, kartu P banding Q, padanan dan lawan kata dengan opsi yang dicoret, pasangan analogi, premis ke kesimpulan, denah susunan duduk atau urutan, gambar jawaban untuk Venn, pola gambar, dan klasifikasi), kotak Cara cepat, langkah bernomor, lalu Rumus dan Tips. Hanya tampilan yang berubah: bank soal, ID soal, kunci jawaban, dan data belajar (`asal_paps_v1`) tidak disentuh.
 - Pembaruan v15: rumus (pecahan, akar, pangkat) ditulis bertumpuk rapi; setiap pembahasan berisi Langkah pengerjaan, Rumus & konsep, dan Tips & trik; kunci jawaban yang keliru dibetulkan; soal yang ambigu/rusak/duplikat disembunyikan otomatis (tidak muncul di latihan, tetap aman di riwayat). Kunci progres tidak berubah (`asal_paps_v1`).
 - Data belajar tersimpan di browser perangkat (localStorage). Pakai Pengaturan → Cadangan untuk pindah perangkat.
-- Setelah memperbarui `index.html`, naikkan angka versi di `sw.js` (`const V='paps-v18'`) agar HP memuat versi baru.
+- Setelah memperbarui `index.html`, naikkan angka versi di `sw.js` (`const V='paps-v19'`) agar HP memuat versi baru.
 - Pembuatan laporan PDF memuat pustaka dari cdnjs; butuh internet saat pertama kali.
 
 © 2026 Salwa Tsania Nisa, S.K.M.

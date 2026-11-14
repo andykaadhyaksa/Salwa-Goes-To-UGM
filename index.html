@@ -396,6 +396,78 @@ h1{font-size:26px}
 .qtext .fr,.opt .fr,.lesson .fr{font-size:.95em}
 .lesson .fr .n,.lesson .fr .d{white-space:nowrap}
 .lesson table{display:block;max-width:100%;overflow-x:auto}
+
+/* ===== Pembahasan visual (paps-v19) ===== */
+.vz{display:grid;gap:12px;margin-top:8px;min-width:0}
+.vz-ans{display:flex;align-items:center;gap:10px;background:var(--good-soft);color:var(--good);border-radius:10px;padding:10px 14px;font-size:16px;line-height:1.35}
+.vz-ans .l{flex:none;width:26px;height:26px;border-radius:7px;background:var(--good);color:var(--surface);display:grid;place-items:center;font-weight:800;font-size:14px}
+.vz-ans b{min-width:0;overflow-wrap:anywhere}
+.vz-dg{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--bg);min-width:0}
+.vz-sc{overflow-x:auto;display:flex;justify-content:safe center}.vz-sc>*{flex:none}
+.vz-sc.end{direction:rtl}.vz-sc.end>*{direction:ltr}
+.vz-cap{margin-top:8px;font-size:12.5px;color:var(--ink2);text-align:center;line-height:1.5}
+.vz-svg{display:block;width:100%;height:auto}
+.vz-svg path{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vz-svg .a1{stroke:var(--gold-text)}.vz-svg .a2{stroke:var(--good)}
+.vz-svg rect.pl{stroke-width:1.5}.vz-svg rect.a1{fill:var(--warn-soft)}.vz-svg rect.a2{fill:var(--good-soft)}
+.vz-svg text{text-anchor:middle;font-family:var(--font);stroke:none}
+.vz-svg text.pt{font-size:13px;font-weight:700}.vz-svg text.pt.a1{fill:var(--gold-text)}.vz-svg text.pt.a2{fill:var(--good)}
+.vz-svg text.num{font-size:21px;font-weight:800;fill:var(--ink)}.vz-svg text.num.sm{font-size:17px}.vz-svg text.num.an{fill:var(--good)}
+.vz-svg text.sub{font-size:11px;font-weight:600;fill:var(--ink2)}
+.vz-svg rect.ansb{fill:var(--good-soft);stroke:var(--good);stroke-width:2}
+.vz-venn circle{fill:var(--accent-soft);fill-opacity:.55;stroke:var(--gold-text);stroke-width:2}.vz-venn circle.c2{fill:var(--good-soft);stroke:var(--good)}
+.vz-flow{display:flex;flex-direction:column;align-items:center;gap:2px}.vz-dn{color:var(--ink2);font-size:14px;line-height:1.1}
+.vz-eq{display:inline-block;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 12px;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;max-width:100%;text-align:center}
+.vz-eq.on{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.vz-rel{display:table;margin:0 auto 10px;border:1.5px solid var(--good);color:var(--good);background:var(--surface);border-radius:8px;padding:3px 12px;font-size:12.5px;font-weight:700;text-align:center}
+.vz-prs{display:grid;gap:8px;justify-content:center}.vz-pr{display:flex;flex-wrap:wrap;align-items:center;gap:8px;justify-content:center}
+.vz-bx{border:1.5px solid var(--line);background:var(--surface);border-radius:9px;padding:7px 14px;font-weight:700;font-size:14.5px;overflow-wrap:anywhere;max-width:100%}
+.vz-bx.on{border-color:var(--good);background:var(--good-soft);color:var(--good)}
+.vz-ar{color:var(--ink2);font-weight:700;font-size:13px}.vz-ar.no{color:var(--bad)}
+.vz-tag{flex:none;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
+.vz-tag.ok{color:var(--good);border-color:var(--good)}
+.vz-mean{margin-top:10px;border:1px dashed var(--line);border-radius:10px;padding:8px 12px;font-size:14px;line-height:1.5;display:grid;gap:4px;justify-items:start;background:var(--surface);overflow-wrap:anywhere}
+.vz-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:10px}.vz-chips.c{margin:0 0 10px}
+.vz-chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:3px 11px 3px 4px;font-size:13px;font-weight:600;max-width:100%;overflow-wrap:anywhere}
+.vz-chips.c .vz-chip{padding:4px 12px;font-weight:700}
+.vz-chip i{font-style:normal;flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;background:var(--surface2);color:var(--ink2)}
+.vz-chip.on{border-color:var(--good);background:var(--good-soft);color:var(--good)}.vz-chip.on i{background:var(--good);color:var(--surface)}
+.vz-chip.x{color:var(--ink2);opacity:.85}.vz-chip.x .t{text-decoration:line-through;text-decoration-color:var(--bad)}
+.vz-seat{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center}
+.vz-st{display:flex;flex-direction:column;align-items:center;min-width:54px;border:1.5px solid var(--line);background:var(--surface);border-radius:9px;padding:4px 9px 6px;font-weight:700;font-size:13.5px}
+.vz-st i{font-style:normal;font-size:10.5px;color:var(--ink2);font-weight:700}.vz-st.on{border-color:var(--good);background:var(--good-soft);color:var(--good)}
+.vz-ck{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:4px;font-size:13px;line-height:1.45;color:var(--ink2)}
+.vz-ck li{display:grid;grid-template-columns:18px 1fr;gap:6px}.vz-ck li::before{content:"✓";color:var(--good);font-weight:800}
+.vz-gist{display:flex;flex-direction:column;align-items:center;gap:3px}
+.vz-gist .g{width:100%;border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;font-size:14px;line-height:1.5;display:grid;gap:4px;justify-items:start;overflow-wrap:anywhere;min-width:0}
+.vz-gist .g.a{border-color:var(--good);background:var(--good-soft)}.vz-gist .g>div{min-width:0;max-width:100%}
+.vz-prl{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.vz-if{background:var(--surface2);border-radius:7px;padding:2px 9px;font-weight:600}
+.vz-pqs{display:flex;align-items:stretch;justify-content:center;gap:10px}
+.vz-pq{flex:1 1 0;min-width:0;max-width:220px;border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 10px;display:grid;gap:4px;justify-items:center;text-align:center;font-size:14.5px;overflow-wrap:anywhere}
+.vz-pq .pe{font-weight:600}.vz-pq .v{font-weight:800;font-size:16px}
+.vz-cmp{flex:none;align-self:center;width:38px;height:38px;border-radius:50%;background:var(--good);color:var(--surface);display:grid;place-items:center;font-size:22px;font-weight:800}.vz-cmp.q{background:var(--warn)}
+.vz-fig{display:flex;justify-content:center;min-width:0}.vz-fig .strip{flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:4px}.vz-fig .strip>svg.cell{margin-top:4px}
+.vz-strip svg.cell{width:56px;height:56px;flex:none}
+.vz-cell{flex:none;display:inline-flex;flex-direction:column;align-items:center;gap:2px;border:2px solid transparent;border-radius:10px;padding:2px}
+.vz-cell svg.cell{width:56px;height:56px}.vz-cell.on{border-color:var(--good);background:var(--good-soft)}
+.vz-cell.big svg{width:190px;max-width:100%;height:auto;color:var(--ink)}
+.vz-cell i{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.04em;color:var(--ink2)}.vz-cell.on i{color:var(--good)}
+.vz-cell.tx{border:1.5px solid var(--line);background:var(--surface);padding:6px 10px;font-size:14px}.vz-cell.tx.on{border-color:var(--good);background:var(--good-soft);color:var(--good)}
+.vz-strip:has(.tx){flex-wrap:wrap;justify-content:center}
+.vz-tip{border-radius:12px;padding:10px 14px;font-size:14px;line-height:1.55;border:1.5px solid;overflow-wrap:anywhere}
+.vz-tip .tl{display:block;font-size:11px;font-weight:800;letter-spacing:.08em;margin-bottom:3px}
+.vz-tip ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.vz-tip.trik{background:var(--warn-soft);border-color:var(--gold);color:var(--warn)}
+.vz-tip.cat{background:var(--accent-soft);border-color:var(--line);color:var(--ink)}.vz-tip.cat .tl{color:var(--gold-text)}
+.vz-tip.tips{background:var(--surface);border-color:var(--line);border-style:dashed;color:var(--ink)}.vz-tip.tips .tl{color:var(--ink2)}
+.vz-h{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--gold-text);margin-top:2px}
+.vz-steps{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.vz-steps>li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14.5px;line-height:1.6;min-width:0}
+.vz-steps>li>div{min-width:0;overflow-wrap:anywhere}
+.vz-steps .sn{width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:12px;font-weight:800}
+@media(max-width:520px){.vz-dg{padding:10px 8px}.vz-pqs{gap:6px}.vz-pq{padding:8px 6px;font-size:13.5px}.vz-cmp{width:32px;height:32px;font-size:19px}.vz-strip svg.cell,.vz-cell svg.cell{width:46px;height:46px}.vz-bx{padding:6px 10px;font-size:14px}}
+.vz-grp{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center;min-width:0}.vz-prs .vz-pr{gap:6px}
+.vz-bx.sm{padding:5px 10px;font-size:13.5px}.vz-op{font-size:12px;font-weight:800;border-radius:6px;padding:2px 7px;background:var(--bad-soft);color:var(--bad)}
 </style>
 </head>
 <body>
@@ -779,7 +851,210 @@ function fmx(t){return fmH(esc(t));}
 const qHtml=q=>fmH((q.src&&q.src.startsWith('Generator'))?q.q:esc(q.q)).replace(/\n/g,'<br>');
 const eHtml=s=>esc(s).replace(/\n/g,'<br>');
 const oHtml=v=>isSvg(v)?v:'<span>'+fmx(String(v).replace(/^-(?=\d)/,'−'))+'</span>';
+
+/* ===================== PEMBAHASAN VISUAL (paps-v19) =====================
+   Susunan: kotak jawaban → diagram sesuai jenis soal → cara cepat → langkah bernomor → rumus → tips.
+   Semua dibangun saat tampil dari data soal yang sudah ada (q, o, a, x, qsvg). Tidak ada data tersimpan yang disentuh. */
+const vzPlain=s=>String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&quot;/g,'"').replace(/&amp;/g,'&');
+const vzNum=t=>{let s=String(t).trim().replace(/−/g,'-').replace(/%$/,'').replace(/^Rp\s*/,'');let m;
+ if(/^-?\d{1,3}(\.\d{3})+(,\d+)?$/.test(s))s=s.replace(/\./g,'');
+ if(/^-?\d+,\d+$/.test(s))s=s.replace(',','.');
+ if((m=s.match(/^(-?\d+)\/(\d+)$/)))return m[1]/m[2];
+ return /^-?\d+(\.\d+)?$/.test(s)?parseFloat(s):NaN};
+const vzEq=(a,b)=>Math.abs(a-b)<1e-9;
+const vzFmt=v=>{const r=Math.round(v*1e4)/1e4;return (r<0?'−':'')+Math.abs(r).toLocaleString('id-ID',{maximumFractionDigits:4})};
+const vzSg=v=>(v>=0?'+':'−')+vzFmt(Math.abs(v));
+const vzDiffs=a=>a.slice(1).map((v,i)=>v-a[i]);
+const vzAllEq=a=>a.length>0&&a.every(v=>vzEq(v,a[0]));
+const vzInt=v=>vzEq(v,Math.round(v));
+const vzCapS=s=>{s=String(s).trim();return s.charAt(0).toUpperCase()+s.slice(1)};
+const vzCapW=s=>{s=String(s).trim().replace(/[.…\s]+$/,'');return s===s.toUpperCase()&&s.length>1?s.charAt(0)+s.slice(1).toLowerCase():s};
+const vzOpt=(q,L)=>isSvg(q.o[L])?q.o[L]:fmx(String(q.o[L]).replace(/^-(?=\d)/,'−'));
+function vzCore(q){const st=(q.x&&q.x.st)||[];const g=/^<b>Strategi/.test(st[0]||'');
+ return st.filter((s,i)=>!(g&&i<2)&&!/^<b>(Strategi|Cek akhir)/.test(s)&&!/^Jadi jawaban yang tepat/.test(s)&&!/^(Yang ditanyakan:|Tandai <b>premis|Ditanya:)/.test(s))}
+const vzDg=(inner,cap)=>'<div class="vz-dg">'+inner+(cap?'<div class="vz-cap">'+cap+'</div>':'')+'</div>';
+
+/* ---------- deret angka & huruf: busur operasi ---------- */
+function vzOps(s){
+ const n=s.length;if(n<3||s.some(v=>!Number.isFinite(v)))return null;const d=vzDiffs(s);
+ if(vzAllEq(d))return d.map(vzSg);
+ if(s.every(v=>v!==0)){const r=s.slice(1).map((v,i)=>v/s[i]);
+  if(vzAllEq(r)&&vzInt(r[0]))return r.map(v=>'×'+vzFmt(v));
+  if(vzAllEq(r)&&vzInt(1/r[0]))return r.map(v=>'÷'+vzFmt(1/v))}
+ if(n>=4){const cand=i=>{const a=s[i],b=s[i+1],o=[['+',b-a]];if(a!==0&&vzInt(b/a)&&!vzEq(b/a,1))o.push(['×',Math.round(b/a)]);if(b!==0&&vzInt(a/b)&&!vzEq(a/b,1))o.push(['÷',Math.round(a/b)]);return o};
+  const ap=(o,a)=>o[0]==='+'?a+o[1]:o[0]==='×'?a*o[1]:a/o[1];
+  for(const o1 of cand(0))for(const o2 of cand(1)){
+   if(s.slice(1).every((v,i)=>vzEq(ap(i%2?o2:o1,s[i]),v)))return s.slice(1).map((_,i)=>{const o=i%2?o2:o1;return o[0]==='+'?vzSg(o[1]):o[0]+vzFmt(o[1])})}}
+ if(n>=4){const d2=vzDiffs(d);if(vzAllEq(d2)||(d2.length>1&&vzAllEq(vzDiffs(d2)))||(d.every(v=>v!==0)&&vzAllEq(d.slice(1).map((v,i)=>v/d[i]))))return d.map(vzSg)}
+ if(n>=4&&s.slice(2).every((v,i)=>vzEq(v,s[i]+s[i+1])))return s.slice(1).map((v,i)=>i?'+'+vzFmt(s[i-1]):'');
+ if(n>=4&&s.every(v=>v>0)){const r=s.slice(1).map((v,i)=>v/s[i]);if(r.every(vzInt)&&vzAllEq(vzDiffs(r)))return r.map(v=>'×'+vzFmt(v))}
+ return null}
+function vzArcSvg(lab,sub,hit,chains){
+ const n=lab.length,ml=Math.max.apply(null,lab.map(x=>x.length)),mo=Math.max.apply(null,[0].concat(chains.map(c=>Math.max.apply(null,c.ops.map(o=>o.length)))));
+ const two=chains.length>1,W=Math.max(54,ml*12+22,two?0:mo*8.5+22),w=n*W+16,cx=i=>8+W*i+W/2,hs=!!sub;
+ let arcs='';
+ chains.forEach((c,ci)=>{const up=ci===0,cls=ci?'a2':'a1';
+  for(let k=0;k<c.idx.length-1;k++){const op=c.ops[k];if(!op)continue;const x1=cx(c.idx[k]),x2=cx(c.idx[k+1]),mx=(x1+x2)/2,y=up?58:(hs?112:98),py=up?(two?10:16):(hs?160:146),cy=up?(two?-6:2):(hs?176:162),lw=Math.max(34,op.length*8.5+12);
+   arcs+='<path class="'+cls+'" d="M'+x1+' '+y+' Q'+mx+' '+cy+' '+(x2-1)+' '+(up?y-2:y+2)+'"/><path class="'+cls+'" d="M'+(x2-5)+' '+(up?y-9:y+9)+' L'+x2+' '+(up?y-1:y+1)+' L'+(x2+5)+' '+(up?y-9:y+9)+'"/><rect class="'+cls+' pl" x="'+(mx-lw/2)+'" y="'+py+'" width="'+lw+'" height="22" rx="6"/><text class="'+cls+' pt" x="'+mx+'" y="'+(py+15.5)+'">'+esc(op)+'</text>'}});
+ const none=!chains.length,H=(none?56:two?172:104)+(hs?14:0),off=none?-50:two?0:-8;
+ const nums=lab.map((t,i)=>{const bw=Math.max(34,t.length*12+14),on=i===hit;return (on?'<rect class="ansb" x="'+(cx(i)-bw/2)+'" y="'+(60+off)+'" width="'+bw+'" height="'+(hs?48:36)+'" rx="8"/>':'')+'<text class="num'+(on?' an':'')+(t.length>5?' sm':'')+'" x="'+cx(i)+'" y="'+(86+off)+'">'+esc(t)+'</text>'+(hs?'<text class="sub" x="'+cx(i)+'" y="'+(102+off)+'">'+esc(sub[i])+'</text>':'')}).join('');
+ return '<div class="vz-sc'+(hit>=n-3&&n>5?' end':'')+'"><svg class="vz-svg" viewBox="0 0 '+w+' '+H+'" style="min-width:'+Math.min(w,n*40)+'px;max-width:'+w+'px" role="img" aria-label="Diagram pola deret">'+(two||none?arcs:'<g transform="translate(0 -8)">'+arcs+'</g>')+nums+'</svg></div>'}
+function vzDeret(q){
+ const t=vzPlain(q.q).replace(/^\s*Deret\s*:\s*/i,'').replace(/\s*Pilihan\s*:\s*$/i,'').trim();
+ if(/\n/.test(t)||t.length>90)return '';
+ const tk=t.split(/\s*,\s+|\s*;\s*/).map(x=>x.trim()).filter(Boolean);if(tk.length<4)return '';
+ const ans=vzPlain(q.o[q.a]).trim(),lab=[],bl=[];
+ tk.forEach(x=>{if(/^(\.{2,}|…+|\?|_+)\.?$/.test(x)){bl.push(lab.length);lab.push(ans)}else lab.push(x)});
+ if(bl.length>1||lab.some(x=>x.length>9||/\s/.test(x)))return '';
+ let hit=bl.length?bl[0]:lab.push(ans)-1;
+ const letters=lab.every(x=>/^[A-Z]$/.test(x)),val=lab.map(x=>letters?x.charCodeAt(0)-64:/^√/.test(x)?NaN:vzNum(x)),n=lab.length,core=vzCore(q).map(vzPlain);
+ let ops=null,cap='';
+ /* 1) operasi yang sama persis dengan teks pembahasan */
+ if(hit===n-1){for(const ln of core){const m=ln.match(/^(?:Hitung\s+)?selisih (?:antar suku|tiap dua suku berurutan)\s*:\s*(.+)$/i)||ln.match(/^Bagi tiap suku dengan suku sebelumnya\s*:\s*(.+)$/i);if(!m)continue;
+   const L=m[1].split('→')[0].replace(/[.\s]+$/,'').split(/,\s+/).map(x=>x.trim());
+   if(L.length!==n-2||!L.every(x=>/^[+−×÷-]/.test(x)))break;
+   let last='';const k=L.length;
+   if(L.every(x=>x===L[0]))last=L[0];
+   else if(k>=3&&L.every((x,i)=>i<2||x===L[i-2]))last=L[k-2];
+   else if(Number.isFinite(val[n-1])&&Number.isFinite(val[n-2])){
+    if(/^[×÷]/.test(L[0])){const r=val[n-1]/val[n-2];last=Math.abs(r)>=1?'×'+vzFmt(r):'÷'+vzFmt(1/r)}
+    else{let d=val[n-1]-val[n-2];if(letters){const pos=L.filter(x=>x[0]==='+').length>=L.length/2;if(pos&&d<0)d+=26;if(!pos&&d>0)d-=26}last=vzSg(d)}}
+   ops=L.concat([last]);break}
+  const s2=core.find(x=>/selisih dari selisih/i.test(x));if(ops&&s2){const m=s2.match(/tetap\s*=\s*([+−-]?[\d.,\/]+)/);if(m)cap='Selisihnya sendiri berubah tetap '+m[1].replace(/[.,]$/,'')+' tiap langkah.'}}
+ /* 2) deteksi pola otomatis */
+ let chains=[];
+ if(ops)chains=[{idx:lab.map((_,i)=>i),ops}];
+ else{const a=vzOps(val);
+  if(a)chains=[{idx:lab.map((_,i)=>i),ops:a}];
+  else if(n>=6){const ev=[],od=[];for(let i=0;i<n;i++)(i%2?od:ev).push(i);const A=vzOps(ev.map(i=>val[i])),B=vzOps(od.map(i=>val[i]));
+   if(A&&B){chains=[{idx:ev,ops:A},{idx:od,ops:B}];cap='Dua pola bergantian: busur atas untuk suku ganjil, busur bawah untuk suku genap.'}}}
+ if(!chains.length){const p=core.find(x=>/^(Deretnya cocok|Pola\s*:|Pola ini|Perhatikan:|Amati suku)/i.test(x));cap=p?esc(p):'Kotak hijau = suku yang dicari.'}
+ if(letters)cap=(cap?cap+' ':'')+'Angka kecil = nomor urut huruf (A = 1, Z = 26).';
+ return vzDg(vzArcSvg(lab,letters?val.map(String):null,hit,chains),cap)}
+
+/* ---------- rantai hitung, Venn himpunan, perbandingan P–Q ---------- */
+function vzEqs(q){const out=[];vzCore(q).forEach(s=>{const p=vzPlain(s).trim();
+  if(!/=/.test(p)||!/\d|[xyab]\b/.test(p)||/^(Rumus|Ingat|Ubah huruf|Pasangan)/i.test(p))return;
+  if(p.length<=64){out.push(s.replace(/\.$/,''));return}
+  if(/→/.test(p)){p.split('→').forEach(g=>{g=g.replace(/^[^:=]{0,24}:\s*/,'').replace(/\.$/,'').trim();if(/=/.test(g)&&g.length<=64)out.push(esc(g))});return}
+  const m=p.match(/(?:^|[:;,]\s)([^:;,=]{2,44}=[^:;(]{1,34}?)(?=\s*(?:\(|;|\.\s|\.$|$))/);if(m)out.push(esc(m[1].trim()))});
+ return out.filter((s,i)=>out.indexOf(s)===i)}
+function vzVenn2(q){
+ if(!/Himpunan/i.test(q.cat||''))return '';let m=null;
+ vzCore(q).forEach(s=>{m=m||vzPlain(s).match(/(\d+)\s*\+\s*(\d+)\s*[−-]\s*(\d+)\s*=\s*(\d+)/)});if(!m)return '';
+ const a=+m[1],b=+m[2],c=+m[3],u=+m[4];if(a-c<0||b-c<0)return '';
+ return vzDg('<div class="vz-sc"><svg class="vz-svg vz-venn" viewBox="0 0 260 150" style="max-width:320px" role="img" aria-label="Diagram Venn dua himpunan"><circle class="c1" cx="100" cy="90" r="52"/><circle class="c2" cx="160" cy="90" r="52"/><text class="sub" x="66" y="22">Kelompok 1 ('+a+')</text><text class="sub" x="194" y="22">Kelompok 2 ('+b+')</text><text class="num" x="72" y="94">'+(a-c)+'</text><text class="num an" x="130" y="94">'+c+'</text><text class="num" x="188" y="94">'+(b-c)+'</text><text class="sub" x="72" y="110">hanya 1</text><text class="sub" x="130" y="110">keduanya</text><text class="sub" x="188" y="110">hanya 2</text></svg></div>',
+  'Isi irisan dulu ('+c+'), lalu sisanya: '+(a-c)+' + '+c+' + '+(b-c)+' = <b>'+u+'</b>. Yang suka keduanya hanya dihitung satu kali.')}
+function vzDisc(q){
+ const st=[];vzCore(q).forEach(s=>{const m=vzPlain(s).match(/^Setelah diskon (\d+(?:,\d+)?)%(?: lagi)?:\s*(?:Rp\s?)?([\d.]+)/);if(m)st.push([m[1],m[2].replace(/\.$/,'')])});
+ const p0=vzPlain(q.q).match(/Rp\s?([\d.]+\d)/);if(st.length<2||!p0)return '';
+ return vzDg('<div class="vz-prs"><div class="vz-pr"><span class="vz-bx sm">Rp'+esc(p0[1])+'</span>'+st.map((x,i)=>'<span class="vz-op">−'+esc(x[0])+'%</span><span class="vz-ar">→</span><span class="vz-bx sm'+(i===st.length-1?' on':'')+'">Rp'+esc(x[1])+'</span>').join('')+'</div></div>',
+  'Diskon kedua dihitung dari harga <b>setelah</b> diskon pertama, jadi persennya tidak boleh dijumlahkan.')}
+function vzCalc(q){
+ const e=vzEqs(q);if(!e.length)return '';
+ return vzDg('<div class="vz-flow">'+e.slice(0,6).map((c,i,a)=>'<span class="vz-eq'+(i===a.length-1?' on':'')+'">'+fmH(c)+'</span>').join('<span class="vz-dn">↓</span>')+'</div>','Rantai hitung dari data soal sampai jawaban (kotak hijau = hasil akhir).')}
+function vzPQ(q){
+ if(!q.pq)return '';const ln=vzPlain(q.q).split(/\n/).map(x=>x.trim()).filter(Boolean);
+ const P=ln.find(x=>/^P\s*=/.test(x)),Q=ln.find(x=>/^Q\s*=/.test(x));if(!P||!Q)return '';
+ const cond=ln.filter(x=>x!==P&&x!==Q).join(' ; ');let pv='',qv='';
+ vzCore(q).forEach(s=>{const m=vzPlain(s).match(/P\s*=\s*([^;]+);\s*Q\s*=\s*([^.;]+(?:\.\d+)?)\.?/);if(m&&!pv){pv=m[1].trim();qv=m[2].trim()}});
+ const a=vzPlain(q.o[q.a]),sg=/P\s*>\s*Q/.test(a)?'>':/P\s*<\s*Q/.test(a)?'<':/P\s*=\s*Q/.test(a)?'=':'?';
+ const card=(n,ex,v)=>'<div class="vz-pq"><span class="vz-tag">'+n+'</span><div class="pe">'+fmx(ex.replace(/^[PQ]\s*=\s*/,''))+'</div>'+(v&&v.length<16?'<div class="v">= '+fmx(v)+'</div>':'')+'</div>';
+ return vzDg((cond?'<div class="vz-rel">Syarat: '+fmx(cond)+'</div>':'')+'<div class="vz-pqs">'+card('P',P,pv)+'<span class="vz-cmp'+(sg==='?'?' q':'')+'">'+esc(sg)+'</span>'+card('Q',Q,qv)+'</div>',
+  sg==='?'?'Hasil perbandingan bisa berubah tergantung nilai yang dipilih, jadi hubungannya tidak dapat ditentukan.':'Hitung P dan Q dalam bentuk yang sama, baru bandingkan.')}
+
+/* ---------- verbal: sinonim, antonim, analogi, wacana ---------- */
+function vzChips(q,strike){return '<div class="vz-chips">'+Object.keys(q.o).map(L=>'<span class="vz-chip'+(L===q.a?' on':strike?' x':'')+'"><i>'+L+'</i><span class="t">'+vzOpt(q,L)+'</span></span>').join('')+'</div>'}
+function vzPadan(q){
+ const anti=q.comp==='V2',core=vzCore(q);let w='',mean='';
+ core.forEach((s,i)=>{const m=s.match(/Kata yang ditanyakan:\s*<b>(.+?)<\/b>/);if(m){w=vzPlain(m[1]);const nx=core[i+1];if(nx&&!/^(Opsi yang maknanya|Lawan kata)/.test(vzPlain(nx)))mean=nx}});
+ if(!w)w=vzPlain(q.q).replace(/^(Sinonim|Antonim|Lawan kata|Persamaan kata)\s+(dari\s+)?(kata\s+)?/i,'').replace(/\s*(adalah|=|><)?\s*[.…]*\s*$/i,'');
+ if(!w||w.length>40)return '';
+ return vzDg('<div class="vz-prs"><div class="vz-pr"><span class="vz-bx">'+esc(vzCapW(w))+'</span><span class="vz-ar'+(anti?' no':'')+'">'+(anti?'✕ berlawanan':'= semakna')+'</span><span class="vz-bx on">'+vzOpt(q,q.a)+'</span></div></div>'+(mean?'<div class="vz-mean"><span class="vz-tag">Arti kata</span><div>'+fmH(mean)+'</div></div>':'')+vzChips(q,true),
+  anti?'Yang dicari arah makna yang berlawanan. Opsi yang dicoret bermakna mirip atau tidak berlawanan.':'Yang dicari makna paling dekat. Opsi yang dicoret hanya berkaitan topik, berbunyi mirip, atau berlawanan.')}
+function vzAnalogi(q){
+ const qt=vzPlain(q.q).split(/\n/).filter(l=>/:/.test(l)).pop()||'';if(/→/.test(qt))return '';
+ const sd=qt.split(/\s*=\s*/);if(sd.length>2||!sd[0])return '';
+ const blank=s=>/^[.…_\s?]*$/.test(s),sp=s=>s.split(/\s*:\s*/).map(x=>x.trim());
+ const L=sp(sd[0]),A=sp(vzPlain(q.o[q.a]));let R=sd[1]&&sd[1].trim()?sp(sd[1]):L.map(()=>'');
+ if(L.length!==R.length||L.length<2||L.length>3)return '';
+ const nb=L.concat(R).filter(blank).length;if(!nb||A.length!==nb)return '';
+ let ai=0;const hl=[],hr=[],top=L.map((x,i)=>blank(x)?(hl.push(i),A[ai++]):x),bot=R.map((x,i)=>blank(x)?(hr.push(i),A[ai++]):x);
+ const row=(ws,h)=>'<span class="vz-grp">'+ws.map((w,i)=>'<span class="vz-bx'+(h.includes(i)?' on':'')+'">'+esc(vzCapW(w))+'</span>').join('<span class="vz-ar">→</span>')+'</span>',whole=!hl.length&&hr.length===R.length;
+ const rel=vzCore(q).filter(s=>!/^(Pasangan pada soal|Ujikan kalimat)/.test(vzPlain(s)));
+ return vzDg('<div class="vz-rel">hubungan sama, urutan sama</div><div class="vz-prs"><div class="vz-pr"><span class="vz-tag">'+(whole?'Soal':'Kiri')+'</span>'+row(top,hl)+'</div><div class="vz-pr"><span class="vz-tag'+(whole?' ok':'')+'">'+(whole?'Jawab':'Kanan')+'</span>'+row(bot,hr)+'</div></div>'+(rel.length?'<div class="vz-mean"><span class="vz-tag">Hubungannya</span><div>'+rel.map(fmH).join(' ')+'</div></div>':''),
+  'Buat satu kalimat hubungan dari pasangan pertama, lalu pakai kalimat yang sama pada pasangan kedua. Arah panah tidak boleh terbalik. Kotak hijau = jawaban.')}
+function vzGist(q,tagMid){
+ if(Object.values(q.o).some(isSvg))return '';
+ let ask=vzPlain(q.q).replace(/\s+/g,' ').trim();if(ask.length>110){const ss=ask.match(/[^.!?]+[.!?…]*/g)||[ask];ask=ss[ss.length-1].trim();if(ask.length<25&&ss.length>1)ask=(ss[ss.length-2]+' '+ask).trim();if(ask.length>190)ask='… '+ask.slice(-188)}
+ const core=vzCore(q).filter(s=>!/^(Tentukan paragraf|Cek tiap opsi|Soal meminta)/.test(vzPlain(s))),ev=core.length?core[core.length-1]:'';
+ return vzDg('<div class="vz-gist"><div class="g"><span class="vz-tag">Yang ditanya</span><div>'+fmx(ask)+'</div></div>'+(ev?'<span class="vz-dn">↓</span><div class="g"><span class="vz-tag">'+(tagMid||'Alasan kunci')+'</span><div>'+fmH(ev)+'</div></div>':'')+'<span class="vz-dn">↓</span><div class="g a"><span class="vz-tag ok">Jawaban</span><div><b>'+vzOpt(q,q.a)+'</b></div></div></div>')}
+
+/* ---------- penalaran: premis → kesimpulan, susunan, Venn, gambar ---------- */
+function vzLogic(q,lb){
+ const bl=vzPlain(q.q).split('•');
+ if(bl.length>2){const pr0=bl.slice(1).map((x,i,a)=>{x=x.replace(/\s+/g,' ').trim();if(i===a.length-1)x=x.replace(/\s+(Kesimpulan|Simpulan|Manakah|Pernyataan yang|Siapa|Berapa|Maka|Jadi)\b[^•]*$/,'').replace(/([.!])\s+[^.!?]*\?\s*$/,'$1').replace(/\s+[A-ZÀ-Ý][^.•]*(?::|\?|…|\.{2,})\s*$/,'');return x}).filter(Boolean);
+  if(pr0.length>=2&&pr0.length<=6&&!pr0.some(x=>x.length>170))return vzLogicH(q,pr0,lb||'Fakta')}
+ return vzLogicP(q,lb)}
+function vzLogicH(q,pr,lb){
+ const fm=x=>{const m=x.match(/^Jika (.+?),? maka (.+?)[.]?$/i);return m?'<span class="vz-if">'+esc(vzCapS(m[1]))+'</span><span class="vz-ar">→</span><span class="vz-if">'+esc(vzCapS(m[2]))+'</span>':esc(x.replace(/\.$/,''))};
+ return vzDg('<div class="vz-gist">'+pr.map((x,i)=>'<div class="g"><span class="vz-tag">'+(pr.length>1?lb+' '+(i+1):'Pernyataan')+'</span><div class="vz-prl">'+fm(x)+'</div></div>').join('')+'<span class="vz-dn">↓</span><div class="g a"><span class="vz-tag ok">Kesimpulan yang sah</span><div><b>'+vzOpt(q,q.a)+'</b></div></div></div>',
+  'Kesimpulan harus <b>pasti</b> benar dari '+(lb==='Fakta'?'fakta':'premis')+' di atas, bukan sekadar mungkin benar.')}
+function vzLogicP(q,lb){
+ let pr=((q.x&&q.x.st)||[]).map(vzPlain).filter(s=>/^Premis\s*\d*\s*:/.test(s)).map(s=>s.replace(/^Premis\s*\d*\s*:\s*/,''));
+ if(!pr.length){const raw=vzPlain(q.q).replace(/\s+/g,' ').replace(/^Soal\s+/,'');
+  const qs=[...raw.matchAll(/[“"]([^”"]{6,160})[”"]/g)].map(m=>m[1]);
+  if(qs.length&&/Premis|Pernyataan|Diketahui/i.test(raw))pr=qs;
+  else{pr=(raw.match(/[^.!?]+[.!?…]*/g)||[]).map(x=>x.trim()).filter(x=>x.replace(/[.…\s]/g,'').length>6&&!/^(Kesimpulan|Simpulan|Maka|Jadi|Manakah|Pernyataan yang|Berdasarkan|Premis\s*:?$)\b.*$/i.test(x)||/^Jika .+ maka .+/i.test(x));
+   pr=pr.filter(x=>!/(\.{2,}|…|\?)\s*$/.test(x))}}
+ if(!pr.length||pr.length>5||pr.some(x=>x.length>180))return '';
+ return vzLogicH(q,pr,lb||'Premis')}
+function vzSeat(q){
+ const all=((q.x&&q.x.st)||[]).join('\n'),m=all.match(/<b>(1\.[^<]+)<\/b>/);if(!m)return '';
+ const seats=m[1].split(/\s[–—-]\s/).map(x=>x.trim().replace(/^\d+\.\s*/,''));if(seats.length<3)return '';
+ const am=all.match(/Pertanyaan menanyakan[^<]*<b>([^<]+)<\/b>/),ask=am?am[1].trim():vzPlain(q.o[q.a]).trim();
+ const ck=(all.match(/Cek ulang[^\n]*/)||[''])[0].split('✓').slice(1).map(x=>x.replace(/[;.\s]+$/,'').trim()).filter(Boolean);
+ return vzDg('<div class="vz-seat">'+seats.map((n,i)=>'<span class="vz-st'+(n===ask?' on':'')+'"><i>'+(i+1)+'</i>'+esc(n)+'</span>').join('')+'</div>'+(ck.length?'<ul class="vz-ck">'+ck.map(c=>'<li>'+esc(c)+'</li>').join('')+'</ul>':''),
+  'Satu-satunya susunan yang memenuhi semua petunjuk. Kotak hijau = yang ditanyakan.')}
+function vzVenn3(q){
+ if(!isSvg(q.o[q.a]))return '';const m=String(q.q).match(/<b>([^<]+)<\/b>/),ob=m?m[1].split(/\s*[—–]\s*/).map(x=>x.trim()).filter(Boolean):[];
+ const rel=vzCore(q).map(vzPlain).filter(s=>!/^(Tentukan hubungan|Pilih diagram)/.test(s));
+ return vzDg((ob.length?'<div class="vz-chips c">'+ob.map(o=>'<span class="vz-chip">'+esc(o)+'</span>').join('')+'</div>':'')+'<div class="vz-fig"><span class="vz-cell on big">'+q.o[q.a]+'</span></div>',rel.map(esc).join(' '))}
+function vzSerial(q){
+ if(!q.qsvg||!isSvg(q.o[q.a]))return '';const i=q.qsvg.lastIndexOf('<svg class="cell"');if(i<0||q.qsvg.slice(i).indexOf('>?<')<0)return '';
+ const rel=vzCore(q).map(vzPlain).filter(s=>!/^(Bandingkan gambar|Terapkan perubahan)/.test(s));
+ return vzDg('<div class="vz-fig">'+q.qsvg.slice(0,i).replace('<div class="strip">','<div class="strip vz-strip">')+'<span class="vz-cell on">'+q.o[q.a]+'</span></div></div>',rel.map(esc).join(' ')||'Kotak hijau = gambar yang melanjutkan pola.')}
+function vzOdd(q){
+ const rel=vzCore(q).map(vzPlain).filter(s=>!/^(Cari aturan kesamaan|Yang menyimpang)/.test(s)),fig=Object.values(q.o).some(isSvg);
+ const cells=Object.keys(q.o).map(L=>'<span class="vz-cell'+(L===q.a?' on':'')+(fig?'':' tx')+'">'+(fig?q.o[L]:'<b>'+fmx(q.o[L])+'</b>')+'<i>'+(L===q.a?'BEDA':'sama')+'</i></span>').join('');
+ return vzDg('<div class="vz-fig"><div class="strip vz-strip">'+cells+'</div></div>',rel.map(esc).join(' ')||'Empat mengikuti satu aturan yang sama, satu menyimpang.')}
+
+/* ---------- perakit ---------- */
+function vzDiagram(q){
+ switch(q.comp){
+  case 'K1':return vzDeret(q)||vzCalc(q)||vzGist(q,'Pola');
+  case 'K2':case 'K3':return vzVenn2(q)||vzDisc(q)||vzCalc(q)||vzGist(q);
+  case 'K4':return vzPQ(q)||vzCalc(q)||vzGist(q);
+  case 'V1':case 'V2':return vzPadan(q)||vzGist(q);
+  case 'V3':return vzAnalogi(q)||vzGist(q,'Hubungannya');
+  case 'V4':return vzGist(q,'Bukti dari teks');
+  case 'P1':return vzLogic(q)||vzGist(q);
+  case 'P2':return vzVenn3(q)||vzGist(q);
+  case 'P3':return vzSeat(q)||vzCalc(q)||(/•/.test(q.q)?vzLogic(q,'Fakta'):'')||vzGist(q);
+  case 'P4':return vzSerial(q)||vzGist(q);
+  case 'P5':return vzOdd(q);
+  default:return vzCalc(q)||vzGist(q)}}
 function exBlock(q){
+ const x=q.x;
+ if(!x)return q.e?eHtml(q.e):'<span class="muted">Pembahasan tidak tersedia.</span>';
+ let dg='';try{dg=vzDiagram(q)||''}catch(err){dg=''}
+ const box=(k,t,a)=>a&&a.length?'<div class="vz-tip '+k+'"><span class="tl">'+t+'</span>'+(a.length>1?'<ul>'+a.map(s=>'<li>'+fmH(s)+'</li>').join('')+'</ul>':'<div>'+fmH(a[0])+'</div>')+'</div>':'';
+ const st=(x.st||[]).filter(s=>!/^Jadi jawaban yang tepat/.test(s)).map((s,i)=>'<li><span class="sn">'+(i+1)+'</span><div>'+fmH(s)+'</div></li>').join('');
+ return '<div class="vz"><div class="vz-ans"><span class="l">'+q.a+'</span><b>'+(isSvg(q.o[q.a])?'Jawaban: gambar '+q.a:'Jawaban: '+vzOpt(q,q.a))+'</b></div>'+dg+box('trik','CARA CEPAT',x.cc)+
+  (st?'<div class="vz-h">LANGKAH MENGERJAKAN</div><ol class="vz-steps">'+st+'</ol>':'')+box('cat','RUMUS &amp; KONSEP',x.fm)+box('tips','TIPS &amp; TRIK',x.tp)+
+  (x.nt?'<div class="exnt"><b>Catatan koreksi:</b> '+fmx(x.nt)+'</div>':'')+'</div>'}
+
+function exBlockOld(q){
   const x=q.x;
   if(!x)return q.e?eHtml(q.e):'<span class="muted">Pembahasan tidak tersedia.</span>';
   let h='<div class="exs"><div class="exh">Langkah pengerjaan</div><ol class="exst">'+x.st.map(s=>'<li>'+fmH(s)+'</li>').join('')+'</ol></div>';
